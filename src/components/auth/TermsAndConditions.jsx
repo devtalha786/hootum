@@ -24,15 +24,15 @@ const TermsAndConditions = ({ open, toggle, onAgreed }) => {
         </DialogHeader>
 
         {/* Scrollable Content */}
-        <div className="relative h-[450px] -mt-3">
+        <div className="relative h-[270px] md:h-[450px] -mt-3">
           <div
-            className="h-[450px] overflow-y-auto pr-3 custom-scrollbar touch-pan-y"
+            className="h-[270px] md:h-[450px] overflow-y-auto pr-3 custom-scrollbar touch-pan-y"
             style={{
               WebkitOverflowScrolling: "touch", // Enables smooth touch scrolling on iOS
               overscrollBehavior: "contain", // Prevents scroll chaining
             }}
           >
-            <Card className="bg-gray-50 rounded-3xl border-0">
+            <Card className="bg-[#0000000D] rounded-[20px] border-0">
               <CardContent className="p-6">
                 <div className="space-y-4 text-gray-600 text-sm">
                   <p className="text-gray-500">Last Revised: January 8, 2024</p>

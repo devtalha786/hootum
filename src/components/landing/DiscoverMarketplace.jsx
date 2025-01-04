@@ -9,9 +9,9 @@ import MarketplaceModal from '../common/MarketplaceModal';
 import { useState } from 'react';
 
 const DiscoverMarketplace = () => {
-		const [open, setOpen] = useState(false); // Modal visibility state
+		const [open, setOpen] = useState(false); 
+		// Modal visibility state
 		// const [hasTriggered, setHasTriggered] = useState(false); // Track if the modal has been shown
-
 		// useEffect(() => {
 		// 	const section = document.getElementById('unique-section');
 	
@@ -19,7 +19,6 @@ const DiscoverMarketplace = () => {
 		// 		console.warn('Section with ID "unique-section" not found.');
 		// 		return;
 		// 	}
-	
 		// 	// Observe section visibility
 		// 	const observer = new IntersectionObserver(
 		// 		entries => {
@@ -32,7 +31,6 @@ const DiscoverMarketplace = () => {
 		// 		},
 		// 		{ threshold: 0.5 } // Trigger when 50% of the section is visible
 		// 	);
-	
 		// 	observer.observe(section);
 	
 		// 	return () => {
@@ -69,7 +67,7 @@ const DiscoverMarketplace = () => {
 						<ArtCard key={piece.id} piece={piece} />
 					))}
 				</div>
-				<div className='flex items-center justify-center mt-3 hidden md:grid'>
+				<div className='flex items-center justify-center mt-3 md:grid'>
 					<button onClick={toggle} className='px-4 py-3 w-[214px] h-[44px] rounded-[20px] border border-black flex items-center justify-between bg-white'>
 						<span>Load more</span>
 						<svg
