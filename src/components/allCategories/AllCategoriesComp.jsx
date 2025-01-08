@@ -3,16 +3,16 @@ import CategoriesSlider from '@/components/allCategories/CategoriesSlider';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import React, { use, useState } from 'react';
+import { useState } from 'react';
 
 const AllCategoriesComp = () => {
-	const router = useRouter(); // Initialize the Next.js router
+	const router = useRouter(); 
 
-	const [isOpenMedium, setIsOpenMedium] = useState(false); // To manage dropdown visibility
+	const [isOpenMedium, setIsOpenMedium] = useState(false); 
 	const [selectedMedium, setSelectedMedium] = useState('Sort');
 
 	const handleClick = () => {
-		router.push('/viewAllCategories'); // Redirect to /allcategories
+		router.push('/viewAllCategories'); 
 	};
 	const popularCategories = [
 		{ id: 1, title: 'Fine Art', image: '/backgrounds-images/Nazul-profile.svg' },
@@ -24,9 +24,9 @@ const AllCategoriesComp = () => {
 		{ id: 7, title: 'Jewelary', image: '/popular/jewelary.svg' },
 		{ id: 8, title: 'Sneakers', image: '/popular/sneakers.svg' },
 		{ id: 9, title: 'Books', image: '/popular/books.svg' },
-		{ id: 10, title: 'Interior', image: '/popular/interior.svg' },
+		{ id: 10, title: 'Interior', image: '/popular/Interior.svg' },
 		{ id: 11, title: 'Bag', image: '/popular/bag.svg' },
-		{ id: 12, title: 'Stickers', image: '/popular/Stickers.svg' },
+		{ id: 12, title: 'Stickers', image: '/popular/stickers.svg' },
 	];
 	const allCategorySlides = [
 		{
@@ -211,7 +211,7 @@ const AllCategoriesComp = () => {
 			</div>
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-8 gap-x-9 gap-y-12 px-12 md:px-0'>
 				{popularCategories.map(category => (
-					<Card
+					<Card key={category.id}
 						className='overflow-hidden max-w-sm cursor-pointer border-[#D3D3D3] text-center'
 						onClick={handleClick}
 					>
